@@ -34,6 +34,15 @@ public class WaffleEngineTests
     }
 
     [Fact]
+    public void HtmlWaffleSampleNoHeadAndBodyParam()
+    {
+        var text = WaffleEngine.Html(
+            paragraphs: 2,
+            includeHeading: true);
+        Debug.WriteLine(text);
+    }
+
+    [Fact]
     public void TextWaffleSingle()
     {
         var random = new Random(0);

@@ -8,12 +8,12 @@ namespace WaffleGenerator
 {
     public static class WaffleEngine
     {
-        public static string Html(int paragraphs, bool includeHeading, bool includeHeadAndBody)
+        public static string Html(int paragraphs, bool includeHeading, bool includeHeadAndBody = false)
         {
             return Html(new Random(), paragraphs, includeHeading, includeHeadAndBody);
         }
 
-        public static string Html(Random random, int paragraphs, bool includeHeading, bool includeHeadAndBody)
+        public static string Html(Random random, int paragraphs, bool includeHeading, bool includeHeadAndBody = false)
         {
             return Html(x => random.Next(0, x), paragraphs, includeHeading, includeHeadAndBody);
         }
